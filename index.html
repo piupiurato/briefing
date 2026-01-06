@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Briefing - Criação de Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Formulário de Briefing</h1>
+    <p>Preencha os dados abaixo para podermos analisar o seu projeto.</p>
+
+    <form action="https://formsubmit.co/ruben.developer1@gmail.com" method="POST">
+
+      <h2>Informações Gerais</h2>
+      <label>Nome *</label>
+      <input type="text" name="nome" required>
+
+      <label>Empresa / Projeto</label>
+      <input type="text" name="empresa">
+
+      <label>Email *</label>
+      <input type="email" name="email" required>
+
+      <label>Telefone / WhatsApp</label>
+      <input type="text" name="telefone">
+
+      <label>Tipo de Projeto</label>
+      <select name="tipo_projeto">
+        <option>Site institucional</option>
+        <option>Loja online</option>
+        <option>Landing page</option>
+        <option>Blog</option>
+        <option>Outro</option>
+      </select>
+
+      <h2>Objetivo do Site</h2>
+      <textarea name="objetivo" placeholder="Qual o principal objetivo do site?"></textarea>
+
+      <h2>Conteúdo</h2>
+      <label>Já possui logótipo?</label>
+      <select name="logo">
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+
+      <label>Já possui textos?</label>
+      <select name="textos">
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Parcialmente</option>
+      </select>
+
+      <h2>Funcionalidades</h2>
+      <textarea name="funcionalidades" placeholder="Funcionalidades desejadas"></textarea>
+
+      <h2>Prazo e Orçamento</h2>
+      <label>Prazo desejado</label>
+      <input type="text" name="prazo">
+
+      <label>Orçamento aproximado</label>
+      <input type="text" name="orcamento">
+
+      <button type="submit">Enviar Briefing</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
