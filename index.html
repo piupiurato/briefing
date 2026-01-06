@@ -3,17 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <title>Formulário de Briefing - Criação de Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 25px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      font-size: 18px;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    small {
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
     <h1>Formulário de Briefing</h1>
-    <p>Preencha os dados abaixo para podermos analisar o seu projeto.</p>
+    <p>Preencha os dados abaixo para analisarmos o seu projeto de website.</p>
 
+    <!-- Substitui SEU_EMAIL@gmail.com pelo teu email real -->
     <form action="https://formsubmit.co/ruben.developer1@gmail.com" method="POST">
+      <!-- Config extra do FormSubmit -->
+      <input type="hidden" name="_subject" value="Novo Briefing de Website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
       <h2>Informações Gerais</h2>
+
       <label>Nome *</label>
       <input type="text" name="nome" required>
 
@@ -53,19 +125,20 @@
       </select>
 
       <h2>Funcionalidades</h2>
-      <textarea name="funcionalidades" placeholder="Funcionalidades desejadas"></textarea>
+      <textarea name="funcionalidades" placeholder="Funcionalidades desejadas (ex: formulário de contacto, loja, área restrita...)"></textarea>
 
       <h2>Prazo e Orçamento</h2>
       <label>Prazo desejado</label>
-      <input type="text" name="prazo">
+      <input type="text" name="prazo" placeholder="Ex: até final de março">
 
       <label>Orçamento aproximado</label>
-      <input type="text" name="orcamento">
+      <input type="text" name="orcamento" placeholder="Ex: 500€ - 1500€">
 
       <button type="submit">Enviar Briefing</button>
-
+      <small>Após enviar, receberá uma cópia no seu email (se ativar essa opção no FormSubmit).</small>
     </form>
   </div>
 
 </body>
 </html>
+
